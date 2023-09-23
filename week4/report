@@ -1,1 +1,24 @@
+	6.double bodyTemp = 36.5;
+		7.(1)int i =0;
+	(2)while(1>i) {}
+int i=3;
+(3)boolean b = (3 < 5) ? true : false;
+(4)int score = 85;
+if (score >= 80 && score <= 90) {
+  System.out.print(score);
+ 
+}
+8.
+age <= 12
+age < b && age > c   
+age -5 == 10
+age != b || age == c
+9.
+sum = (sum>100)?100:0;
+10.
+System.out.println(n>5?n:5);
+11.
+text\"
+12.
+나는 "java를 100%"사랑
 
