@@ -1,0 +1,68 @@
+
+//1번답 4번 
+//2번답 3번 
+//3번답 3번 
+//4번답 1번 
+//5번답 2번 
+
+//(6) 1.this() 를 이용하여 생성자를 수정하라 
+//class TV {
+//    private int size;
+//    private String manufacturer;
+//
+//    public TV() {
+//        this(32, "LG"); // this()를 이용하여 다른 생성자를 호출
+//        System.out.println(size + "인치" + manufacturer);
+//    }
+//
+//    public TV(String manufacturer) {
+//        this(32, manufacturer); // this()를 이용하여 다른 생성자를 호출
+//        System.out.println(size + "인치" + manufacturer);
+//    }
+//
+//    public TV(int size, String manufacturer) {
+//        this.size = size;
+//        this.manufacturer = manufacturer;
+//    }
+//}
+// 2. 32인치LG
+//32인치LG
+//32인치삼성
+//32인치삼성
+//3.TV tv = new TV(65, "삼성");
+// 4. 코드중복을줄이고 코드가 간결해진다 .
+
+
+//(7)오류부분 은 aPerson.age =17;private 를 선언했기떄문에 외부클래스에 접근불가하다 접근하고싶으면public을
+//써라 
+//(8)
+class power {
+    private int kick;
+    private int punch;
+
+    public void setKick(int kick) {
+        this.kick = kick;
+    }
+
+    public void setPunch(int punch) {
+        this.punch = punch;
+    }
+
+    public void attack() {
+        setKick(10);
+        setPunch(20);
+    }
+}
+//(9) 자바에서 객체를 임의로 소멸시킬수 없으며, 이것은 개발자에게 매우 난처한 일이다. 참조하는 레퍼런스가 하나도 없는
+//객체를 가비지 라고 판단하고 ,이를 가용메모리로 자동 수집하는 가비지컬렉션을진행시킨다 .
+//응용프로그램에서 자바 에게 이 과정을 지시하고자 하면 System.gc() 코드를 호출하면 된다.
+//(10)발생했다 String s =null; 에서 s 값이 null이기 떄문에 더이tkd String s는 참조되지 않는다 .
+//(11)  잘못된 부분은 4번 	static int g() { retrun getB(); }
+//(12) 잘못된 부분은 4번 tmp =a.y; 
+//(13) 틀린부분 없습니다 .
+//(14) 1. final class Rect에서 final 클래스 중복선언 2.Rect클래스 에서 x final 중복선언  
+// 3. SpecialRect 클래스의 f() 에  final 를  사용
+//(15) 장점 : 메모리릭 방지 ,사용안하는 메모리를 수거함으로써 성능 향상 단점 : 가비지컬렉션 실행동안  성능저하 
+//(16) default :O x , public :  o o ,protected :  x x , private : x ,x
+
+
