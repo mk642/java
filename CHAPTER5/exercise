@@ -1,1 +1,24 @@
+//1. 다음클래스에대해 물음에 답하라 .
+class A{
+	private int a;
+	public void set(int a ) {this.a =a;}
+}
+class B extends A{
+	protected int  b ,c;
+} 
+class C extends B{
+	public int d, e;
+}
 
+class D extends C{
+	public void f() {
+		a= 1; 
+		set(10);
+		b=20;
+		d =30;
+	}
+}
+//A obj = new objA(); 에의해 생성되는 객체 objA 의 맴버들을 모두 나열하라 : private int a
+//B obj = new objA(); 에의해 생성되는 객체 objA 의 맴버들을 모두 나열하라 : private int a , protected int b, c 
+//C obj = new objA(); 에의해 생성되는 객체 objA 의 맴버들을 모두 나열하라 : protected int b,c , public int d, e
+//클래스 D를 다음과 같이 작성하였을떄, 오류가 발생하는 라인을 모두 찾아라  : 1번라인 
