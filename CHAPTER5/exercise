@@ -251,7 +251,32 @@ abstract class Circle extends Shape{
 	public Circle(int radius) {this.radius = radius;}
 	double getArea() {return 3.14*radius*radius;}
 }
-14. 다형성에 대한 설명중 틀린것은 ? 
+14. 다형성에 대한 설명중 틀린것은 ?  4
+15. 다음중 인터페이스의 특징이 아닌것은 ?   2 
+//16 빈칸을 적절히 채우고 실행예시와 같이 출력되도록 클래스 TV에 필요한 메소드를 추가 작성하라 
+class Device {
+	void on();
+	void off();
+}
+public class TV extends Device {
 
+    public void on() {
+        System.out.println("켜졌습니다.");
+    }
 
+    public void off() {
+        System.out.println("종료합니다.");
+    }
+
+    public void watch() {
+        System.out.println("방송중입니다.");
+    }
+
+    public static void main(String[] args) {
+        TV tv = new TV();
+        tv.on();
+        tv.watch();
+        tv.off();
+    }
+}
 
