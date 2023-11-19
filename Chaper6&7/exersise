@@ -67,6 +67,7 @@ b = Boolean.parseBoolean("true");
 String s2 = Integer.toBinaryString(30);
 (5)문자 c를 문자열 c로 변환하여 변수 c 에 저장하는 한줄의 코드를 작성하라 
 c = String.valueOf(c);
+
 //7다음코드의 실행 결과와 실행결과의 이유를 말하라 . true , false 
 a와 "가나다라 "는 같은 문자열 리터럴을 가리키는 동일한 메모리 주소를 갖습니다. 따라서 a == "가나다라 "는 true를 반환합니다.
 a와 b는 서로 다른 메모리 주소를 갖습니다. 따라서 a == b는 false를 반환합니다.
@@ -75,3 +76,31 @@ System.out.println(a=="가나다라 ");
 String b =new String(a);
 System.out.println(a==b);
 
+//8.  oh, happy day.
+//9.다음코드에 대해 물음에 답하여라 
+(1) a 와 ==연산을 수행하였을떄 true 가 되는 문자열을 b~f 중 모두골라라. a b 
+(2) f와 equals() 연산을 수행하였을떄 true 가 되는 문자열을 a~e 중 모두 골라라 .d e 
+//10 다음 중 자동 박싱과 자동 언박싱이 있는 부분을 파악하라 .  1, 2 
+//11. 100에서 255까지 (255포함) 의 난수를 10개 발생시키는 코드이다 . 
+System.out.println(randomNumber);
+import java.util.Random;
+
+public class RandomNumberGenerator {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+
+        // 100에서 255까지의 난수 10개를 발생시킵니다.
+        for (int i = 0; i < 10; i++) {
+            int randomNumber = random.nextInt(156) + 100;
+            System.out.println(randomNumber);
+        }
+    }
+}
+12. 다음은 2020년 12월 25일의 약속을 저장하기위해 Calender 클래스를 활용하는 코드이다 .주석문에맞도록 코드를 작성하라 
+Calendar date = Calendar.getInstance();
+        date.clear();
+        date.set(Calendar.YEAR, 2020);
+        date.set(Calendar.MONTH, 11);
+        date.set(Calendar.DATE, 25);
+        System.out.println("약속 날짜는 " + date.get(Calendar.YEAR) + "년 " + (date.get(Calendar.MONTH) + 1) + "월" + date.get(Calendar.DATE) + "일 입니다.");
