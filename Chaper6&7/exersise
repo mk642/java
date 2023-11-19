@@ -55,11 +55,23 @@ public class Home {
 Device/tv.class
 app/home.class
 //6. wrapper 클래스에 대한 질문이다 .물음에 답하여라 . 
-
-
-
-
-
-
-
+(1)정수 20을 문자열변수 s1에 20으로 저장하는 코드를 작성하라
+String s1 = "20";
+(2) 문자열35.9를 double 타입 변수 d에 실수값 35.9로 저장하는 코드를 작성하라 
+double d;
+d = Double.parseDouble("35.9");
+(3)true 문자열을 boolean 타입 변수에 b 에 불린값 true 를 저장하는 코드를 작성하라 
+boolean b;
+b = Boolean.parseBoolean("true");
+(4) 정수 30을 이진수 문자열로 변환하여 s2에 저장하는 한줄의 코드를 작성하라 
+String s2 = Integer.toBinaryString(30);
+(5)문자 c를 문자열 c로 변환하여 변수 c 에 저장하는 한줄의 코드를 작성하라 
+c = String.valueOf(c);
+//7다음코드의 실행 결과와 실행결과의 이유를 말하라 . true , false 
+a와 "가나다라 "는 같은 문자열 리터럴을 가리키는 동일한 메모리 주소를 갖습니다. 따라서 a == "가나다라 "는 true를 반환합니다.
+a와 b는 서로 다른 메모리 주소를 갖습니다. 따라서 a == b는 false를 반환합니다.
+String a = "가나다라 ";
+System.out.println(a=="가나다라 ");
+String b =new String(a);
+System.out.println(a==b);
 
