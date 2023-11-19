@@ -5,4 +5,61 @@
 (3) o 
 (4) 0 
 //2 패키지에대한 설명중 잘못된것은 ?  2
-//3 
+//3 improt 문을 사용하지 않도록 example 클래스를 다시작성하라 . 
+System.out.println("a=3");
+System.out.println("a=5");
+System.out.println("a=6");
+//4 다음과 같이 출력되도록 코드를 수정하라 .  a 3 b 5 c 6 합은 14 
+public class kkk {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     System.out.println("a");
+     int a = sc.nextInt();
+     System.out.println("b");
+     int b = sc.nextInt();
+     System.out.println("c");
+     int c =sc.nextInt();
+     int max = a +b +c; 
+          
+            System.out.println("합은  "+ max );
+            sc.close();
+    
+    }
+}
+//5. 다음클래스에 device 패키지에 속하게 하고자한다 .빈칸에 적합한 코드를 작성하라 . 
+//(1) package Device
+// publuc class TV{
+//     private int size; 
+//     public TV(int size){this.size =size;}
+// }
+
+(2) package app;
+
+public class Home {
+
+    private TV tv;
+
+    public Home() {
+        this.tv = new TV(55);
+    }
+
+    public void turnOn() {
+        tv.turnOn();
+    }
+
+    public void turnOff() {
+        tv.turnOff();
+    }
+}
+(3) TV클래스와 Home 클래스를 컴파일 TV.class Home.class 의 경로명은 ? 
+Device/tv.class
+app/home.class
+//6. wrapper 클래스에 대한 질문이다 .물음에 답하여라 . 
+
+
+
+
+
+
+
+
