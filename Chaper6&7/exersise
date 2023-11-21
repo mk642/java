@@ -115,3 +115,94 @@ chaper7.
 Vector<E>에서 E는 제네릭 타입 혹은 제네렉 객체라고 부른다 E에 Integer 등과 같이 객체 타입을 지정하여 특정
 타입의 데이터만 다루도록 만드는 작업을 컬렉션이라고 한다 .재네렉 기능은 C++에서 먼저 만들어졌으며 C++에서는 일반화라고부른다
 //3.다음코드에 대한 설명으로 틀린것은 ? 3 
+//4 . 다음 물음에 적합한 코드를 작성하라 
+ (1) 문자열만 저장할수있는 백터 sv 생성
+ Vector<String> sv = new Vector<>();
+ (2)키가 문자열이고 값이 실수인 해시맵 h 생성 
+ HashMap<String, Double> h = new HashMap<>();
+ (3) person타입의 객체를 10개 저장할 공간을 갖춘 arraylist 컬렉션 pa생성 
+ ArrayList<Person> pa = new ArrayList<>(10);
+(4) 나라 이름과 인구를 저장하고 관리하는 해시맵 pop생성
+HashMap<String, Integer> pop = new HashMap<>();
+//5. 다음코드에서 맞는것은 ?   2
+1.Stack<string>ss; 
+2.Arraylist<E>ar=new Arratlist<E>();
+3.HashMap<String>h= new HashMap<String>();
+4.Set<Integer>s = new Set<Integer>(100) ;
+//6.다음코드에서 자동 박싱과 자동 언박싱이 일어나는 곳을 지적하라 . double객체 , 3,14 
+Vector<Double> v = new Vector<Double>()
+v.add(3.14);
+double d = v.get(0);
+//7.다음프로그램은 초기에 벡터 크기를 3으로 설정하였다 .for 문을 실행하고 벗어났을떄 벡터의 용량이 어떻게 변했는지 확인하라. 벡터의 용량이 모자랄떄, 한번에 
+얼마만큼씩 용량을 늘리는가?  2배씩 
+Vector<Integer> v= new Vector<Integer>(3);
+for(int i =0;i<10; i++) v.add(i);
+System.out.println(v.capacity());
+//8 주석문을 참고햐여 빈칸에 적절한 코드로 채워라 . 
+ArrayList<String> a = new ArrayList<String>(10);
+a.add("java");
+a.add(0, "C++");
+System.out.println(a.size()); // 2
+a.remove(a.size() - 1);
+for (String s : a) {
+    System.out.println(s);
+}
+//9.다음에서 밑줄친 부분과 동일하게 작동하도록 Iterator 를 이용하여 다시 작성하라. 
+Iterator<Integer> iter = v.Iterator();
+while (iter.hasNext()) {
+    System.out.println(iter.next());
+}
+//10 다음은 해시맵 h를 만들고 func(h) 메소드를 호출하여 h에 들어있는 원소의 개수를 리턴받아 출력하는 코드이다 . func()메소드를 작성하라 .
+HashMap<String, Integer> h = new HashMap<String, Integer>();
+h.put("a", 10);
+h.put("b", 20);
+int count = func(h);
+System.out.println(count);
+11.다음 제네릭 클래스에 대해 아래 문항에 답하라 . 
+(1)JGeneric의 타입 매개변수는 몇개이며 무엇인가 ? w , 1 개 
+(2) String으로 구체화 한 JGeneric 객체를 생성하는 코드를 작성하라 .JGeneric<String> j = new JGeneric<String>("a", "b");
+(3)첫번쨰 값을 x를 리턴하는 메소드 first()를 작성하라 public W first() {return x;}
+(4)두번쟤값 y를 리턴하는 메소드 second()를 작성하라. public W second() {return y;}
+(5)equal()메소드를 작성하라 .equal()는 필드x와 y를 비교하여 같으면 true, 아니면 false를 리턴한다 public boolean equal(JGeneric<W> j) {
+    return x.equals(j.x) && y.equals(j.y);
+}
+(6)<W>String으로 구체화한 JGenric 객체를 활용하는 예를들어라
+JGeneric<String> j = new JGeneric<String>("a", "b");
+
+// first() 메소드 활용
+System.out.println(j.first()); // a
+
+// second() 메소드 활용
+System.out.println(j.second()); // b
+
+// equal() 메소드 활용
+JGeneric<String> j2 = new JGeneric<String>("a", "b");
+System.out.println(j.equal(j2)); // true
+
+JGeneric<String> j3 = new JGeneric<String>("a", "c");
+System.out.println(j.equal(j3)); // false
+//12. 다음질문에 답하라 . 
+(1)JClass의 take()메소드는 무엇을 처리하는 코드인가? index
+(2)JClass의 take()메소드가 임의의 타입에 대해 동작하도록 제네릭 메소드로 수정하여 JGenClass를 작성하라
+class JGenClass<T> {
+    static T take(T[] t, int index) {
+        if (index < 0 || index >= t.length) {
+            System.out.println("인덱스가 잘못되었습니다.");
+            return null;
+        }
+        return t[index];
+    }
+}
+(3)JGenClass를 활용하는 코드 사례를 보여라 .
+Integer[] i = {1, 2, 3};
+String[] s = {"a", "b", "c"};
+
+System.out.println(JGenClass.take(i, 0)); // 1
+System.out.println(JGenClass.take(s, 0)); // a
+
+
+
+
+
+
+
